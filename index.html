@@ -3,368 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRIMPEP - Cosmetic Peptide & Skincare Raw Material Manufacturer</title>
-    <!-- 免费外部样式，无需本地文件 -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: '#7928ca',
-                        light: '#f8f5fc',
-                        dark: '#222222'
-                    },
-                    fontFamily: {
-                        en: ['Inter', 'sans-serif']
-                    }
-                }
-            }
+    <meta name="description" content="PRIMPEP | Salon professional skincare and daily home skincare wholesale supplier, meso serum, ampoule, freeze-dried powder, private label available">
+    <title>PRIMPEP | Professional Skincare Supplier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow {text-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-            .btn-primary {@apply bg-brand text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all duration-300 shadow-lg}
-            .section-padding {@apply py-16 md:py-24}
+
+        :root {
+            --warm-bg: #F8F4EF;
+            --white: #FFFFFF;
+            --main-dark: #3A2E23;
+            --main-text: #5C4B3C;
+            --light-text: #947F6B;
+            --accent-gold: #C8A988;
+            --whatsapp-green: #25D366;
+            --transition: all 0.3s ease-in-out;
         }
-        /* Cookie弹窗样式 */
-        .cookie-box {display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 20px; box-shadow: 0 -2px 10px #0002; z-index: 9999;}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--warm-bg);
+            color: var(--main-text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            color: var(--main-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .bg-white {
+            background-color: var(--white);
+        }
+
+        /* 导航栏 */
+        .header {
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-list a {
+            font-size: 15px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-list a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* 首屏Banner */
+        .hero {
+            width: 100%;
+            height: 85vh;
+            background: linear-gradient(120deg, #F3EBE1 0%, #F8F4EF 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--main-text);
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--main-dark);
+            color: #fff;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .btn-main:hover {
+            background: var(--accent-gold);
+            color: var(--main-dark);
+        }
+
+        /* 产品布局 */
+        .line-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 45px;
+        }
+
+        .line-card {
+            background: #fff;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .line-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(92, 75, 60, 0.1);
+        }
+
+        .line-text {
+            padding: 25px;
+        }
+
+        .line-text h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        /* 客户担忧板块 */
+        .worry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .worry-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .worry-card h4 {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        /* FAQ 折叠面板 */
+        .faq-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-q {
+            padding: 18px 25px;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-a {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-a {
+            padding: 0 25px 20px;
+            max-height: 500px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--main-dark);
+            color: #ddd;
+            padding: 60px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .footer-col p {
+            line-height: 2;
+            font-size: 15px;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            margin-top: 15px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* 悬浮WhatsApp按钮 */
+        .wa-float {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 9999;
+        }
+
+        .wa-btn {
+            display: inline-block;
+            padding: 14px 22px;
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(37,211,102,0.25);
+            transition: var(--transition);
+        }
+
+        .wa-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* 移动端适配 */
+        @media(max-width:900px){
+            .nav-list{display:none;}
+            .hero-content h1{font-size:36px;}
+            .section-title h2{font-size:28px;}
+            .line-grid{grid-template-columns:1fr;}
+            .container{padding:0 20px;}
+            .header-inner{padding:15px 20px;}
+        }
     </style>
 </head>
-<body class="font-en text-dark bg-white">
-    <!-- 导航栏 -->
-    <header class="fixed w-full bg-white/95 backdrop-blur shadow-sm z-50">
-        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center py-4">
-            <a href="#" class="text-2xl font-bold text-brand">PRIMPEP</a>
-            <nav class="hidden md:flex gap-8">
-                <a href="#home" class="hover:text-brand transition-colors">Home</a>
-                <a href="#products" class="hover:text-brand transition-colors">Products</a>
-                <a href="#about" class="hover:text-brand transition-colors">About Us</a>
-                <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
-                <a href="#legal" class="hover:text-brand transition-colors">Legal Info</a>
-            </nav>
-            <a href="#contact" class="btn-primary text-sm">Get Quote</a>
-            <!-- 移动端菜单按钮 -->
-            <button class="md:hidden text-xl"><i class="fa-solid fa-bars"></i></button>
-        </div>
-    </header>
+<body>
 
-    <!-- 首页横幅 -->
-    <section id="home" class="section-padding pt-32 bg-light">
-        <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6">
-                    Dual Premium Skincare Lines<br>Salon Professional & At-Home Light Aesthetics
-                </h1>
-                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    PRIMPEP builds two differentiated high-value skincare series to cover all beauty demands.
-        Our salon-exclusive professional line delivers high-concentration intensive treatment kits, tailor-made for beauty spas and medical beauty centers to boost salon core profitability.
-        Our at-home light medical beauty & daily skincare collection transfers salon-level anti-aging, firming and brightening effects into easy, gentle daily routines, letting every customer enjoy professional facial care at home.
-        All formulas are enriched with premium active peptides for long-lasting visible skin improvement.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#products" class="btn-primary">View Products</a>
-                    <a href="https://wa.me/85247487837" target="_blank" class="border border-brand text-brand px-6 py-3 rounded-lg hover:bg-brand hover:text-white transition-all">
-                        <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp Chat
-                    </a>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cosmetic Peptide Raw Material" class="w-full h-auto">
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品板块 -->
-    <section id="products" class="section-padding">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Core Products</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">All products with complete safety data sheet & cosmetic registration documents for export</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-               <!-- ========== 第一板块：美容院专线产品 ========== -->
-<section class="p-6">
-  <h2 class="text-2xl font-semibold mb-4">Beauty Salon Professional Line</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-     <img src="Skin Boosters.png" style="width:100%;height:220px;object-fit:cover;">
-      <div style="height:220px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;color:#777;">
-        Salon Product Image (To be added)
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-semibold mb-2">Professional Salon Meso & Infusion Series</h3>
-        <p class="text-gray-600 text-sm mb-4">Micro-infusion kits, high-concentration peptide ampoules, salon exclusive anti-aging treatment set.</p>
-        <span class="text-brand font-medium">Custom salon wholesale package</span>
-      </div>
+<!-- 导航栏 Logo区域，使用你提供的Primpep品牌logo -->
+<header class="header">
+    <div class="header-inner container">
+        <a href="#" class="logo-wrap">
+            <img src="img/primpep-logo.png" alt="Primpep Logo" class="logo-img">
+            <span class="logo-text">PRIMPEP</span>
+        </a>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#salon-line">Salon Professional Line</a></li>
+                <li><a href="#daily-line">Home Daily Skincare</a></li>
+                <li><a href="#worry">Buyer Concerns</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Salon & Home Skincare Wholesale Supplier</h1>
+        <p>Two complete skincare collections: professional salon products and daily home skincare. Bulk wholesale & private label available.</p>
+        <a href="#salon-line" class="btn-main">Browse Products</a>
+    </div>
 </section>
-               <!-- ========== 第二板块：日常家用护肤品 10张图 ========== -->
-<section class="p-6 mt-8">
-  <h2 class="text-2xl font-semibold mb-4">Daily Home Skincare Products</h2>
-  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Bio Collagen Deep Hydration Mask.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Bio Collagen Deep Hydration Mask</h4>
-      </div>
+
+<!-- 美容院院线 -->
+<section id="salon-line" class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Salon Professional Line</h2>
+            <p>Professional formulas designed for beauty salon & aesthetic clinic treatment</p>
+        </div>
+        <div class="line-grid">
+            <div class="line-card">
+                <img src="img/salon-meso-serum.jpg" alt="Meso Hydrating Serum">
+                <div class="line-text">
+                    <h3>Meso Hydrating Solution</h3>
+                    <p>Salon-grade hydrating essence for professional facial treatment.</p>
+                </div>
+            </div>
+            <div class="line-card">
+                <img src="img/salon-ampoule.jpg" alt="Single Dose Ampoule">
+                <div class="line-text">
+                    <h3>Single-Dose Ampoules</h3>
+                    <p>Sterile concentrated ampoule for clinic intensive skin care.</p>
+                </div>
+            </div>
+            <div class="line-card">
+                <img src="img/salon-lyophilized-powder.jpg" alt="Freeze Dried Powder">
+                <div class="line-text">
+                    <h3>Lyophilized Freeze-Dried Powder</h3>
+                    <p>Repair series for sensitive and post-procedure skin recovery.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Bounceback Fine Lines Serum.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Bounceback Fine Lines Serum</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Collagen Jelly Cream.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Collagen Jelly Cream</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Deep Collagen Silk Ampoule.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Deep Collagen Silk Ampoule</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Glycolic Acid 7% Exfoliating Toner.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Glycolic Acid 7% Toner</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Micro-Infusion Facial System Peptide Serum Kit.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Micro-Infusion Peptide Serum Kit</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="NAD+ Peptide Boosting Cream.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">NAD+ Peptide Boosting Cream</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Natural Tallow & Honey Skin Balm.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Tallow & Honey Skin Balm</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Power Lift Advanced Ultra Rich Moisturizer.jpg" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Power Lift Moisturizer</h4>
-      </div>
-    </div>
-    <div class="bg-light rounded-xl overflow-hidden shadow hover:shadow-lg transition-all">
-      <img src="Zero Pore Exfoliating Toner Pads.png" style="width:100%;height:220px;object-fit:cover;">
-      <div class="p-4">
-        <h4 class="font-semibold">Skin Boosters Series</h4>
-      </div>
-    </div>
-  </div>
 </section>
-    </section>
 
-    <!-- 关于我们工厂 -->
-    <section id="about" class="section-padding bg-light">
-        <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-            <div class="rounded-2xl overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cosmetic Production Factory" class="w-full h-auto">
-            </div>
-            <div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">About PRIMPEP</h2>
-                <p class="text-gray-600 mb-4 leading-relaxed">
-                    PRIMPEP is a professional manufacturer focusing on cosmetic active peptides and skincare raw materials, with standardized GMP production workshop & independent laboratory.
-                </p>
-                <ul class="space-y-3 text-gray-600 mb-8">
-                    <li><i class="fa-solid fa-check text-brand mr-2"></i> Complete NMPA cosmetic filing for all finished products</li>
-                    <li><i class="fa-solid fa-check text-brand mr-2"></i> Free MSDS, COA, heavy metal & microbe test reports</li>
-                    <li><i class="fa-solid fa-check text-brand mr-2"></i> Flexible MOQ for bulk wholesale & small trial orders</li>
-                    <li><i class="fa-solid fa-check text-brand mr-2"></i> One-stop OEM/ODM private label customization service</li>
-                    <li><i class="fa-solid fa-check text-brand mr-2"></i> Export to EU, US, Southeast Asia & global beauty merchants</li>
-                </ul>
-                <a href="#contact" class="btn-primary">Request Factory Document Pack</a>
-            </div>
+<!-- 居家日常护肤 -->
+<section id="daily-line" class="section-padding bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Home Daily Skincare Line</h2>
+            <p>Mild and effective skincare for daily home light aesthetic maintenance</p>
         </div>
-    </section>
-
-    <!-- 联系询盘板块 -->
-    <section id="contact" class="section-padding">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Wholesale Quote</h2>
-                <p class="text-gray-500">Send your procurement demand, we will reply within 24 working hours</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- 询盘表单 -->
-                <div class="bg-light p-8 rounded-xl shadow">
-                    <form id="quoteForm">
-                        <div class="mb-5">
-                            <label class="block mb-2 font-medium">Your Name / Company</label>
-                            <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-brand">
-                        </div>
-                        <div class="mb-5">
-                            <label class="block mb-2 font-medium">Email Address</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-brand">
-                        </div>
-                        <div class="mb-5">
-                            <label class="block mb-2 font-medium">WhatsApp Number</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-brand">
-                        </div>
-                        <div class="mb-5">
-                            <label class="block mb-2 font-medium">Products & Quantity Demand</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-brand"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary w-full">Submit Inquiry</button>
-                    </form>
-                </div>
-                <!-- 联系方式 -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Direct Contact</h3>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-brands fa-whatsapp text-brand text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">WhatsApp (24h online)</p>
-                                    <a href="https://wa.me/85247487837" target="_blank" class="text-brand">+852 4748 7837</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-envelope text-brand text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Business Email</p>
-                                    <a href="mailto:zhangyao@primpep.com" class="text-brand">zhangyao@primpep.com</a>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-building text-brand text-xl mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Factory Address</p>
-                                    <p>Qingdao City, Shandong Province, China</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-brand/10 p-6 rounded-xl">
-                        <h4 class="font-semibold mb-3 text-brand">Document Support</h4>
-                        <p class="text-gray-600 text-sm">We can provide: NMPA Cosmetic Filing, MSDS, COA, Heavy Metal Test Report, Production License for customs clearance.</p>
-                    </div>
+        <div class="line-grid">
+            <div class="line-card">
+                <img src="img/collection-cleansing.jpg" alt="Cleansing">
+                <div class="line-text">
+                    <h3>Cleansing Collection</h3>
+                    <p>Mild cleanser & makeup remover for daily skin cleaning.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 合规法律页面 -->
-    <section id="legal" class="section-padding bg-light">
-        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">Legal & Privacy Policy</h2>
-            <div class="space-y-6 text-gray-600 text-sm leading-relaxed">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-dark">1. Privacy Policy (GDPR Compliant)</h3>
-                    <p>PRIMPEP only collects your contact information for business quotation and order communication. We will never sell, rent or disclose your personal data to any third parties without your written consent. All customer information is stored securely and only used for our cooperation communication.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-dark">2. Product Compliance Statement</h3>
-                    <p>All skincare raw materials and finished cosmetics supplied by PRIMPEP have passed China NMPA cosmetic filing, meet domestic production standards. We provide complete export documents for customs clearance of each batch of goods, and do not add prohibited ingredients of cosmetics in any country/region.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-dark">3. Return & Refund Terms</h3>
-                    <p>Bulk raw material orders support sample inspection before mass shipment. If the product quality fails to meet the COA standard, we support free re-delivery or full refund after verification. Custom private label finished goods cannot be returned unless there is a production quality defect.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2 text-dark">4. Cookie Notice</h3>
-                    <p>This website uses cookies to optimize browsing experience, analyze website traffic and better serve global customers. You can disable cookies through your browser settings at any time.</p>
+            <div class="line-card">
+                <img src="img/collection-hydration.jpg" alt="Hydrating Toner">
+                <div class="line-text">
+                    <h3>Hydrating Mist & Toner</h3>
+                    <p>Moisturizing & soothing toner to strengthen skin barrier.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-brand">PRIMPEP</h3>
-                <p class="text-gray-400 text-sm">Cosmetic Peptide & Skincare Raw Material Factory, OEM ODM Custom Service For Global Beauty Brands.</p>
-            </div>
-            <div>
-                <h4 class="font-semibold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400 text-sm">
-                    <li><a href="#home" class="hover:text-brand">Home</a></li>
-                    <li><a href="#products" class="hover:text-brand">Products</a></li>
-                    <li><a href="#about" class="hover:text-brand">About Us</a></li>
-                    <li><a href="#contact" class="hover:text-brand">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold mb-4">Documents</h4>
-                <ul class="space-y-2 text-gray-400 text-sm">
-                    <li><a href="#legal" class="hover:text-brand">Privacy Policy</a></li>
-                    <li><a href="#legal" class="hover:text-brand">Return Terms</a></li>
-                    <li><a href="#legal" class="hover:text-brand">Compliance Statement</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold mb-4">Contact</h4>
-                <p class="text-gray-400 text-sm mb-2">zhangyao@primpep.com</p>
-                <p class="text-gray-400 text-sm mb-4">WhatsApp: +852 4748 7837</p>
-                <div class="flex gap-4 text-xl">
-                    <a href="#" class="hover:text-brand"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" class="hover:text-brand"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="hover:text-brand"><i class="fa-brands fa-instagram"></i></a>
+            <div class="line-card">
+                <img src="img/collection-cream.jpg" alt="Moisturizer Cream">
+                <div class="line-text">
+                    <h3>Moisturizer Cream Series</h3>
+                    <p>Brightening & repairing facial cream for everyday use.</p>
                 </div>
             </div>
-        </div>
-        <div class="container mx-auto px-4 mt-10 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
-            © 2026 PRIMPEP. All Rights Reserved | Cosmetic Raw Material Manufacturer
-        </div>
-    </footer>
-
-    <!-- GDPR Cookie 弹窗（外贸合规强制） -->
-    <div class="cookie-box" id="cookiePopup">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-gray-600">This website uses cookies to improve your browsing experience. By continuing to visit this site, you agree to our cookie policy.</p>
-                <div class="flex gap-3">
-                    <button onclick="acceptCookie()" class="bg-brand text-white px-5 py-2 rounded-lg">Accept All</button>
-                    <button onclick="closeCookie()" class="border border-gray-300 px-5 py-2 rounded-lg">Decline</button>
+            <div class="line-card">
+                <img src="img/collection-sun.jpg" alt="Sun Protection">
+                <div class="line-text">
+                    <h3>Sun Protection & Primer</h3>
+                    <p>Daily sunscreen suitable for post-aesthetic care.</p>
+                </div>
+            </div>
+            <div class="line-card">
+                <img src="img/collection-mask.jpg" alt="Face Mask">
+                <div class="line-text">
+                    <h3>Face Mask Collection</h3>
+                    <p>Hydrating mask for home regular skin maintenance.</p>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- JS脚本 -->
-    <script>
-        // Cookie弹窗控制
-        const cookiePopup = document.getElementById('cookiePopup');
-        if(!localStorage.getItem('cookieAgree')){
-            cookiePopup.style.display = 'block';
-        }
-        function acceptCookie(){
-            localStorage.setItem('cookieAgree','yes');
-            cookiePopup.style.display = 'none';
-        }
-        function closeCookie(){
-            cookiePopup.style.display = 'none';
-        }
-        // 表单提交简单提示
-        document.getElementById('quoteForm').addEventListener('submit',function(e){
-            e.preventDefault();
-            alert("Your inquiry has been submitted successfully, we will contact you within 24 hours!");
-            this.reset();
+<!-- 客户担忧板块 -->
+<section id="worry" class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Buyer Common Concerns</h2>
+            <p>Core advantages for global salon buyers & distributors</p>
+        </div>
+        <div class="worry-grid">
+            <div class="worry-card">
+                <h4>Safe Clean Formula</h4>
+                <p>All products use stable clean ingredients, no hormones, safe for long-term use.</p>
+            </div>
+            <div class="worry-card">
+                <h4>Stable Supply</h4>
+                <p>Continuous bulk supply, consistent quality for long term cooperation.</p>
+            </div>
+            <div class="worry-card">
+                <h4>Private Label Service</h4>
+                <p>Custom logo, packaging and formula for your own brand.</p>
+            </div>
+            <div class="worry-card">
+                <h4>Global Shipping</h4>
+                <p>Support international delivery for overseas distributors.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-padding bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <div class="faq-q">What’s the difference between salon line and daily skincare? <span>+</span></div>
+                <div class="faq-a">Salon line contains higher concentration actives for professional intensive treatment. Daily skincare is milder, designed for routine home maintenance.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do you support private label / OEM? <span>+</span></div>
+                <div class="faq-a">Yes. We provide full private label service including custom packaging, logo printing and slight formula adjustment.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Are products suitable for sensitive skin? <span>+</span></div>
+                <div class="faq-a">Most formulas are mild and suitable for sensitive skin and post-procedure skin.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I mix different series products? <span>+</span></div>
+                <div class="faq-a">All formulas are compatible. You can freely combine products based on skin demands.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3>PRIMPEP</h3>
+            <p>Salon & Home Skincare Supplier</p>
+            <p>Wholesale & Private Label Available</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>Phone: +852 4748 7837</p>
+            <p>WhatsApp: +852 4748 7837</p>
+            <p>Email: zhangyao@primpep.com</p>
+            <!-- Facebook 仅图片跳转，无文字 -->
+            <a href="https://www.facebook.com/messages/?email=251365921@qq.com" target="_blank">
+                <img src="img/fb-icon.png" alt="Facebook" class="social-icon">
+            </a>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 PRIMPEP All Rights Reserved
+    </div>
+</footer>
+
+<!-- 右下角悬浮WhatsApp按钮 -->
+<div class="wa-float">
+    <a href="https://wa.me/85247487837?text=Hello%20PRIMPEP,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="wa-btn">Order via WhatsApp</a>
+</div>
+
+<script>
+    // FAQ点击展开
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item=>{
+        item.addEventListener('click',()=>{
+            item.classList.toggle('active');
         })
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-            anchor.addEventListener('click',function(e){
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})
-            })
-        })
-    </script>
+    })
+</script>
+
 </body>
 </html>
