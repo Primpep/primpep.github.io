@@ -138,7 +138,7 @@
             color: var(--accent-gold);
         }
 
-        /* 首屏 电脑端左右分栏，解决两边留白过大 */
+        /* 首屏 电脑端左右分栏 */
         .hero {
             width: 100%;
             min-height: 100vh;
@@ -228,13 +228,26 @@
             margin-bottom: 10px;
         }
 
-        /* 公司介绍板块 */
-        .about-text {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
+        /* About我们板块【左右图文布局】 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text-block {
             font-size: 17px;
             line-height: 2;
+        }
+        .about-img-box {
+            display: flex;
+            justify-content: center;
+        }
+        .about-img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 6px;
+            box-shadow: 0 16px 40px rgba(58,46,35,0.16);
         }
 
         /* 客户担忧板块 */
@@ -365,6 +378,11 @@
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 40px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
             }
 
             .hero-content h1 {
@@ -505,23 +523,28 @@
     </div>
 </section>
 
-<!-- 公司介绍：倒数第三板块 -->
+<!-- 关于我们 - 左右图文排版 -->
 <section id="about" class="section-padding">
     <div class="container">
         <div class="section-title">
             <h2>About PRIMPEP</h2>
         </div>
-        <div class="about-text">
-            <p>PRIMPEP is a professional skincare wholesale supplier focusing on clinical-grade skincare. We concentrate on developing effective peptide skincare for beauty salons, aesthetic clinics and global skincare distributors.</p>
-            <br>
-            <p>Our business covers two core lines: professional salon skincare for in-spa intensive treatments, and home light aesthetic skincare for daily long-term maintenance. All formulas adopt clean, gentle ingredients, suitable for sensitive skin and post-procedure skin recovery.</p>
-            <br>
-            <p>We support bulk wholesale, small trial orders and full private label service. We help overseas salon owners and distributors launch their own skincare brands with stable quality and competitive price.</p>
+        <div class="about-grid">
+            <div class="about-text-block">
+                <p>PRIMPEP is a professional skincare wholesale supplier focusing on clinical-grade skincare. We concentrate on developing effective peptide skincare for beauty salons, aesthetic clinics and global skincare distributors.</p>
+                <br>
+                <p>Our business covers two core lines: professional salon skincare for in-spa intensive treatments, and home light aesthetic skincare for daily long-term maintenance. All formulas adopt clean, gentle ingredients, suitable for sensitive skin and post-procedure skin recovery.</p>
+                <br>
+                <p>We support bulk wholesale, small trial orders and full private label service. We help overseas salon owners and distributors launch their own skincare brands with stable quality and competitive price.</p>
+            </div>
+            <div class="about-img-box">
+                <img src="img/about-skincare.jpg" alt="PRIMPEP Skincare" class="about-img">
+            </div>
         </div>
     </div>
 </section>
 
-<!-- 买家关注点：倒数第二板块 -->
+<!-- 买家关注点 -->
 <section id="worry" class="section-padding bg-white">
     <div class="container">
         <div class="section-title">
@@ -549,7 +572,7 @@
     </div>
 </section>
 
-<!-- FAQ：最后一个内容板块 -->
+<!-- FAQ -->
 <section id="faq" class="section-padding">
     <div class="container">
         <div class="section-title">
@@ -576,7 +599,7 @@
     </div>
 </section>
 
-<!-- 页脚联系方式（已移除Facebook代码） -->
+<!-- 页脚联系方式（新增Facebook链接） -->
 <footer id="contact">
     <div class="container footer-grid">
         <div class="footer-col">
@@ -591,6 +614,8 @@
             <p>Phone: +852 4748 7837</p>
             <p>Email: zhangyao@primpep.com</p>
             <p>WhatsApp: <a href="https://wa.me/85247487837" target="_blank">+852 4748 7837</a></p>
+            <!-- =========这里替换成你的Facebook Page链接========= -->
+            <p>Facebook: <a href="https://www.facebook.com/填入你的公共主页地址" target="_blank">PRIMPEP Official Page</a></p>
         </div>
     </div>
 
