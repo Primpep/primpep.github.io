@@ -1,669 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1344712590562383');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1344712590562383&ev=PageView&noscript=1"
-/></noscript>
-<!-- WhatsApp Contact Event -->
-    <!-- End Meta Pixel Code -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PRIMPEP | Professional salon skincare & daily home skincare wholesale manufacturer, private label OEM ODM service for global beauty business.">
-    <title>PRIMPEP | Professional Skincare Supplier</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMPEP | B2B Supplier for Spas & Salons</title>
+<meta name="description" content="PRIMPEP supplies complete professional product portfolio: salon‑grade skincare, aromatherapy & massage oils, hair‑care scalp series and waxing hair‑removal supplies. In‑stock goods available, support wholesale and private‑label OEM for spas, salons and aesthetic clinics.">
+<meta name="keywords" content="spa supplies wholesale, salon private label, professional skincare, massage oil, hair‑care serum, waxing supplies, beauty OEM">
+<style>
+/* === 严格沿用 primpep.com 原版简约风格 === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        :root {
-            --warm-bg: #F8F4EF;
-            --white: #FFFFFF;
-            --main-dark: #3A2E23;
-            --main-text: #5C4B3C;
-            --light-text: #947F6B;
-            --accent-gold: #C8A988;
-            --whatsapp-green: #25D366;
-            --overlay-dark: rgba(58, 46, 35, 0.65);
-            --transition: all 0.3s ease-in-out;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-size: 16px;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--warm-bg);
-            color: var(--main-text);
-            line-height: 1.7;
-        }
+h2 {
+    font-size: 24px;
+    margin: 42px 0 14px;
+    font-weight: normal;
+}
 
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            color: var(--main-dark);
-        }
+h3 {
+    font-size: 19px;
+    margin: 22px 0 6px;
+    font-weight: normal;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+h4 {
+    font-size: 17px;
+    margin: 16px 0 4px;
+    font-weight: normal;
+}
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+p {
+    margin-bottom: 10px;
+    color: #333333;
+}
 
-        ul {
-            list-style: none;
-        }
+a {
+    color: #243b52;
+    text-decoration: none;
+}
 
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+a:hover {
+    text-decoration: underline;
+}
 
-        .section-padding {
-            padding: 90px 0;
-        }
+ul {
+    padding-left: 22px;
+    margin-bottom: 12px;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+li {
+    margin-bottom: 5px;
+}
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+hr {
+    border: none;
+    border-top: 1px solid #dddddd;
+    margin: 36px 0;
+}
 
-        .section-title p {
-            color: var(--light-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
+/* 页面内导航按钮 */
+.nav-links {
+    margin: 20px 0 28px;
+}
 
-        .bg-white {
-            background-color: var(--white);
-        }
+.nav-links a {
+    display: inline-block;
+    background: #243b52;
+    color: #ffffff;
+    padding: 9px 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 15px;
+}
 
-        /* 顶部导航 */
-        .header {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.96);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+.nav-links a:hover {
+    background: #324e6b;
+    text-decoration: none;
+}
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-        }
+/* WhatsApp联系按钮 */
+.whatsapp‑btn‑wrap {
+    margin:24px 0;
+}
+.whatsapp‑btn {
+    display:inline‑block;
+    background‑color:#25D366;
+    color:#fff !important;
+    padding:12px 22px;
+    border‑radius:4px;
+    font‑weight:bold;
+    font‑size:15px;
+    text‑decoration:none !important;
+}
+.whatsapp‑btn:hover {
+    background‑color:#20bc5b;
+}
 
-        .logo-wrap {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+/* 产品图片占位 */
+.product‑photo {
+    background: #f7f7f7;
+    color: #777777;
+    font‑size: 13px;
+    padding: 12px;
+    text‑align: center;
+    margin: 12px 0;
+    max‑width: 300px;
+}
 
-        .logo-img {
-            height: 42px;
-            width: auto;
-            display: block;
-        }
+.product‑photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        .logo-text {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--main-dark);
-        }
+.inline‑note {
+    font‑size: 14px;
+    color: #555555;
+    margin: 18px 0 8px;
+}
 
-        .nav-list {
-            display: flex;
-            gap: 35px;
-        }
+/* FAQ */
+.faq‑item {
+    margin‑bottom: 18px;
+}
 
-        .nav-list a {
-            font-size: 15px;
-            font-weight: 500;
-            transition: var(--transition);
-        }
+.faq‑question {
+    font‑weight: bold;
+    margin‑bottom: 4px;
+}
 
-        .nav-list a:hover {
-            color: var(--accent-gold);
-        }
+.faq‑answer {
+    color: #444444;
+}
 
-        /* 首屏 电脑端左右分栏 */
-        .hero {
-            width: 100%;
-            min-height: 100vh;
-            background: linear-gradient(to right, rgba(58, 46, 35, 0.72), rgba(58, 46, 35, 0.35)),
-                        url('img/hero-model.jpg') center center / cover no-repeat;
-            display: flex;
-            align-items: center;
-            color: #fff;
-        }
+/* Footer */
+footer {
+    margin‑top: 60px;
+    padding‑top: 24px;
+    border‑top: 1px solid #dddddd;
+    font‑size: 15px;
+    color: #444444;
+}
 
-        .hero-grid {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 52px;
-            color: #fff;
-            margin-bottom: 24px;
-            line-height: 1.25;
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 600px;
-            margin-bottom: 35px;
-            line-height: 1.8;
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-model-img {
-            width: 100%;
-            max-width: 440px;
-            border-radius: 6px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.38);
-        }
-
-        .btn-main {
-            display: inline-block;
-            padding: 16px 40px;
-            background: var(--accent-gold);
-            color: var(--main-dark);
-            font-weight: 600;
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-
-        .btn-main:hover {
-            background: #fff;
-            color: var(--main-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-
-        /* 产品板块 */
-        .line-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 45px;
-        }
-
-        .line-card {
-            background: #fff;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .line-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(92, 75, 60, 0.1);
-        }
-
-        .line-text {
-            padding: 25px;
-        }
-
-        .line-text h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        /* About我们板块【左右图文布局】 */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-text-block {
-            font-size: 17px;
-            line-height: 2;
-        }
-        .about-img-box {
-            display: flex;
-            justify-content: center;
-        }
-        .about-img {
-            width: 100%;
-            max-width: 480px;
-            border-radius: 6px;
-            box-shadow: 0 16px 40px rgba(58,46,35,0.16);
-        }
-
-        /* 客户担忧板块 */
-        .worry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .worry-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 4px;
-        }
-
-        .worry-card h4 {
-            margin-bottom: 12px;
-            font-size: 18px;
-        }
-
-        /* FAQ */
-        .faq-wrap {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: #fff;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .faq-q {
-            padding: 18px 25px;
-            font-weight: 500;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-a {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: var(--transition);
-            font-size: 15px;
-        }
-
-        .faq-item.active .faq-a {
-            padding: 0 25px 20px;
-            max-height: 500px;
-        }
-
-        /* 页脚 */
-        footer {
-            background: var(--main-dark);
-            color: #ddd;
-            padding: 60px 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-col h3 {
-            color: #fff;
-            margin-bottom: 18px;
-            font-size: 22px;
-        }
-
-        .footer-col p,
-        .footer-col a {
-            line-height: 2;
-            font-size: 15px;
-            color: #ddd;
-        }
-
-        .footer-col a:hover {
-            color: var(--accent-gold);
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 14px;
-            opacity: 0.7;
-        }
-
-        /* 右下角 WhatsApp 悬浮按钮 */
-        .wa-float {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            z-index: 9999;
-        }
-
-        .wa-btn {
-            display: inline-block;
-            padding: 14px 22px;
-            background-color: var(--whatsapp-green);
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 15px;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(37,211,102,0.25);
-            transition: var(--transition);
-        }
-
-        .wa-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(37,211,102,0.35);
-        }
-
-        /* 移动端适配 */
-        @media(max-width:900px){
-            .nav-list {
-                display: none;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .hero-content h1 {
-                font-size: 36px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .line-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-
-            .header-inner {
-                padding: 15px 20px;
-            }
-        }
-    </style>
+footer p {
+    margin‑bottom: 8px;
+}
+</style>
 </head>
 <body>
 
-<!-- 顶部导航 -->
-<header class="header">
-    <div class="header-inner container">
-        <a href="#" class="logo-wrap">
-            <span class="logo-text">PRIMPEP</span>
-        </a>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#salon-line">Salon Professional Line</a></li>
-                <li><a href="#daily-line">Home Daily Skincare</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#worry">Buyer Concerns</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<h1>PRIMPEP</h1>
 
-<!-- 首屏 左右分栏布局 -->
-<section class="hero">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <h1>Advanced Skincare For Professional Beauty Results</h1>
-            <p>PRIMPEP provides two complete skincare systems: salon professional products and daily home maintenance skincare. Safe, stable and formulated for long-term skin health.</p>
-            <a href="#salon-line" class="btn-main">Explore Products</a>
-        </div>
-        <div class="hero-visual">
-            <img src="picture.jpg" alt="Premium Skincare" class="hero-model-img">
-        </div>
-    </div>
-</section>
+<p><strong>Full‑Range Spa & Salon Professional Products</strong></p>
+<p>PRIMPEP supplies complete professional product portfolio: salon‑grade skincare, aromatherapy & massage oils, hair‑care scalp series and waxing hair‑removal supplies. Safe, stable formulas built for long‑term business for spas, salons & aesthetic clinics.</p>
 
-<!-- 美容院院线 -->
-<section id="salon-line" class="section-padding">
-    <div class="container">
-        <div class="section-title">
-            <h2>Salon Professional Line</h2>
-            <p>Professional formulas designed for beauty salon and aesthetic clinic treatment</p>
-        </div>
-        <div class="line-grid">
-            <div class="line-card">
-                <img src="Meso Hydrating Serum.jpg" alt="Meso Hydrating Serum">
-                <div class="line-text">
-                    <h3>Meso Hydrating Solution</h3>
-                    <p>Salon-grade hydrating essence for professional facial treatment.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Single-Dose Ampoules.jpg" alt="Single Dose Ampoule">
-                <div class="line-text">
-                    <h3>Single-Dose Ampoules</h3>
-                    <p>Sterile concentrated ampoule for clinic intensive skin care.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Freeze-Dried Powder.jpg" alt="Freeze Dried Powder">
-                <div class="line-text">
-                    <h3>Lyophilized Freeze-Dried Powder</h3>
-                    <p>Repair series for sensitive and post-procedure skin recovery.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 居家日常护肤 -->
-<section id="daily-line" class="section-padding bg-white">
-    <div class="container">
-        <div class="section-title">
-            <h2>Home Daily Skincare Line</h2>
-            <p>Mild and effective skincare for daily home light aesthetic maintenance</p>
-        </div>
-        <div class="line-grid">
-            <div class="line-card">
-                <img src="Cleansing Collection.jpg" alt="Cleansing">
-                <div class="line-text">
-                    <h3>Cleansing Collection</h3>
-                    <p>Mild cleanser and makeup remover for daily skin cleaning.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Hydrating Mist & Toner.jpg" alt="Hydrating Toner">
-                <div class="line-text">
-                    <h3>Hydrating Mist & Toner</h3>
-                    <p>Moisturizing and soothing toner to strengthen skin barrier.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Moisturizer Cream Series.jpg" alt="Moisturizer Cream">
-                <div class="line-text">
-                    <h3>Moisturizer Cream Series</h3>
-                    <p>Brightening and repairing facial cream for everyday use.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Sun Protection & Primer.jpg" alt="Sun Protection">
-                <div class="line-text">
-                    <h3>Sun Protection & Primer</h3>
-                    <p>Daily sunscreen suitable for post-aesthetic care.</p>
-                </div>
-            </div>
-            <div class="line-card">
-                <img src="Face Mask Collection.jpg" alt="Face Mask">
-                <div class="line-text">
-                    <h3>Face Mask Collection</h3>
-                    <p>Hydrating mask for home regular skin maintenance.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 关于我们 - 左右图文排版 -->
-<section id="about" class="section-padding">
-    <div class="container">
-        <div class="section-title">
-            <h2>About PRIMPEP</h2>
-        </div>
-        <div class="about-grid">
-            <div class="about-text-block">
-                <p>PRIMPEP is a professional skincare wholesale supplier focusing on clinical-grade skincare. We concentrate on developing effective peptide skincare for beauty salons, aesthetic clinics and global skincare distributors.</p>
-                <br>
-                <p>Our business covers two core lines: professional salon skincare for in-spa intensive treatments, and home light aesthetic skincare for daily long-term maintenance. All formulas adopt clean, gentle ingredients, suitable for sensitive skin and post-procedure skin recovery.</p>
-                <br>
-                <p>We support bulk wholesale, small trial orders and full private label service. We help overseas salon owners and distributors launch their own skincare brands with stable quality and competitive price.</p>
-            </div>
-            <div class="about-img-box">
-                <img src="logo.jpg" alt="PRIMPEP Skincare" class="about-img">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 买家关注点 -->
-<section id="worry" class="section-padding bg-white">
-    <div class="container">
-        <div class="section-title">
-            <h2>Buyer Common Concerns</h2>
-            <p>Core advantages for global salon buyers and distributors</p>
-        </div>
-        <div class="worry-grid">
-            <div class="worry-card">
-                <h4>Safe Clean Formula</h4>
-                <p>All products use stable clean ingredients, no hormones, safe for long-term use.</p>
-            </div>
-            <div class="worry-card">
-                <h4>Stable Supply</h4>
-                <p>Continuous bulk supply, consistent quality for long term cooperation.</p>
-            </div>
-            <div class="worry-card">
-                <h4>Private Label Service</h4>
-                <p>Custom logo, packaging and formula for your own brand.</p>
-            </div>
-            <div class="worry-card">
-                <h4>Global Shipping</h4>
-                <p>Support international delivery for overseas distributors.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section-padding">
-    <div class="container">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-wrap">
-            <div class="faq-item">
-                <div class="faq-q">What’s the difference between salon line and daily skincare? <span>+</span></div>
-                <div class="faq-a">Salon line contains higher concentration actives for professional intensive treatment. Daily skincare is milder, designed for routine home maintenance.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Do you support private label / OEM? <span>+</span></div>
-                <div class="faq-a">Yes. We provide full private label service including custom packaging, logo printing and slight formula adjustment.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Are products suitable for sensitive skin? <span>+</span></div>
-                <div class="faq-a">Most formulas are mild and suitable for sensitive skin and post-procedure skin.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q">Can I mix different series products? <span>+</span></div>
-                <div class="faq-a">All formulas are compatible. You can freely combine products based on skin demands.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 页脚联系方式（新增Facebook链接） -->
-<footer id="contact">
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <h3>PRIMPEP</h3>
-            <p>Professional Clinical Skincare Supplier</p>
-            <p>Salon Exclusive & Daily Home Skincare</p>
-            <p>Wholesale & Private Label Available</p>
-        </div>
-
-        <div class="footer-col">
-            <h3>Contact Us</h3>
-            <p>Phone: +852 4748 7837</p>
-            <p>Email: zhangyao@primpep.com</p>
-            <p>WhatsApp: <a href="https://wa.me/85247487837" target="_blank">+852 4748 7837</a></p>
-            <!-- =========这里替换成你的Facebook Page链接========= -->
-            <p>Facebook: <a href="https://www.facebook.com/填入你的公共主页地址" target="_blank">PRIMPEP Official Page</a></p>
-        </div>
-    </div>
-
-    <div class="copyright">
-        © 2026 PRIMPEP All Rights Reserved
-    </div>
-</footer>
-
-<!-- 右下角WhatsApp悬浮按钮 -->
-<div class="wa-float">
-    <a href="https://wa.me/85247487837?text=Hello%20PRIMPEP,%20I%20would%20like%20to%20place%20an%20order."target="_blank" class="wa-btn">Order via WhatsApp</a>
+<div class="nav‑links">
+    <a href="#skincare">Skincare</a>
+    <a href="#haircare">Hair Care</a>
+    <a href="#essentialoil">Essential Oil</a>
+    <a href="#waxing">Waxing</a>
+    <a href="#others">Others</a>
 </div>
 
-<!-- FAQ点击展开脚本 -->
-<script>
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
-    });
-</script>
+<p class="inline‑note">For detailed catalog and price information please contact us via WhatsApp.</p>
+<div class="whatsapp‑btn‑wrap">
+    <a class="whatsapp‑btn" href="https://wa.me/85247487837" target="_blank">Get Detailed Catalog & Price</a>
+</div>
+
+<hr>
+
+<h2 id="skincare">Skincare</h2>
+<p>Professional formulas designed for beauty salon and aesthetic clinic treatment.</p>
+
+<ul>
+    <li>Anti‑Aging &amp; Firming</li>
+    <li>Brightening &amp; Resurfacing</li>
+    <li>Hydration</li>
+    <li>Repair &amp; Soothing</li>
+    <li>Eye Care</li>
+    <li>Exfoliating &amp; Cleansing</li>
+</ul>
+
+<div class="product‑photo">[Product Photo]</div>
+
+<h2 id="haircare">Hair Care</h2>
+<p>Salon‑grade scalp and hair treatment for micro‑infusion salon procedures.</p>
+
+<ul>
+    <li>Hair Growth &amp; Anti‑Hair‑Loss</li>
+    <li>Hair Repair &amp; Conditioning</li>
+    <li>Scalp Care</li>
+</ul>
+
+<div class="product‑photo">[Product Photo]</div>
+
+<h2 id="essentialoil">Essential Oil</h2>
+<p>Professional spa aromatherapy, pure essential oils, carrier oils &amp; bulk massage oil for body &amp; facial spa treatment.</p>
+
+<ul>
+    <li>Aromatherapy &amp; Relaxation</li>
+    <li>Massage &amp; Body Care</li>
+    <li>Carrier Oil / Blending Base</li>
+    <li>Home Fragrance &amp; Diffusion</li>
+</ul>
+
+<div class="product‑photo">[Product Photo]</div>
+
+<h2 id="waxing">Waxing</h2>
+<p>Salon‑grade hair‑removal supplies for full‑body salon waxing service.</p>
+
+<ul>
+    <li>Hair Removal / Waxing</li>
+    <li>Waxing Prep &amp; Aftercare</li>
+</ul>
+
+<div class="product‑photo">[Product Photo]</div>
+
+<h2 id="others">Others</h2>
+<p>Additional special‑treatment salon items for spa &amp; salon business.</p>
+<p class="inline‑note">For complete product list, images and specifications please click WhatsApp button above.</p>
+
+<hr>
+
+<h2>About PRIMPEP</h2>
+<p>PRIMPEP is a China‑based wholesale &amp; OEM manufacturer serving spas, salons, med‑spas and global beauty distributors worldwide.</p>
+<p>Our full‑range product portfolio includes salon‑grade skincare, aromatherapy massage oils, hair‑scalp treatment products and waxing hair‑removal supplies.</p>
+<p>We have large quantity of goods in stock, support bulk wholesale, small trial orders and full private‑label OEM service. We help overseas salon owners and distributors launch their own branded products with stable quality and competitive pricing. Most formulas are clean‑ingredient based, suitable for sensitive skin and post‑procedure recovery.</p>
+
+<h2>Buyer Common Concerns</h2>
+<p>Core advantages for global salon buyers and distributors</p>
+
+<h4>Safe Clean Formula</h4>
+<p>All products use stable clean ingredients, no hormones, safe for long‑term use.</p>
+
+<h4>Stable Supply &amp; In‑Stock Goods</h4>
+<p>Ready stock available, continuous bulk supply, consistent quality for long term cooperation.</p>
+
+<h4>Private Label Service</h4>
+<p>Custom logo, packaging and formula for your own brand.</p>
+
+<h4>Global Shipping</h4>
+<p>Support international delivery for overseas distributors.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq‑item">
+    <div class="faq‑question">Do you support private label / OEM?</div>
+    <div class="faq‑answer">Yes. We provide full private label service including custom packaging, logo printing and slight formula adjustment.</div>
+</div>
+
+<div class="faq‑item">
+    <div class="faq‑question">Are products suitable for sensitive skin?</div>
+    <div class="faq‑answer">Most formulas are mild and suitable for sensitive skin and post‑procedure skin.</div>
+</div>
+
+<div class="faq‑item">
+    <div class="faq‑question">Can I mix different series products?</div>
+    <div class="faq‑answer">All formulas are compatible. You can freely combine products based on skin demands.</div>
+</div>
+
+<div class="faq‑item">
+    <div class="faq‑question">Do you have ready‑stock items?</div>
+    <div class="faq‑answer">Many items are kept in stock, welcome to inquire about stock status and MOQ via WhatsApp.</div>
+</div>
+
+<footer>
+    <h3>PRIMPEP</h3>
+    <p>Full‑Range Spa &amp; Salon Products Supplier<br>
+    In‑Stock | Wholesale &amp; Private‑Label OEM Available</p>
+
+    <h3>Contact Us</h3>
+    <p>Phone: +852 4748 7837</p>
+    <p>Email: zhangyao@primpep.com</p>
+    <p>WhatsApp: <a href="https://wa.me/85247487837" target="_blank">+852 4748 7837</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/primpep.official" target="_blank">PRIMPEP Official Page</a></p>
+    <p>Facebook Shop: <a href="https://www.facebook.com/primpep.official/shop" target="_blank">Visit our Facebook Shop</a></p>
+
+    <p style="margin‑top:18px;">© 2026 PRIMPEP All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
-<script>
-window.addEventListener('load',function(){
-  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link){
-    link.addEventListener('click',function(){
-      fbq('track','Contact');
-    })
-  })
-})
-</script>
+
