@@ -1,306 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRIMPEP | B2B Supplier for Spas & Salons</title>
-<meta name="description" content="PRIMPEP supplies complete professional product portfolio: salon‑grade skincare, aromatherapy & massage oils, hair‑care scalp series and waxing hair‑removal supplies. In‑stock goods available, support wholesale and private‑label OEM for spas, salons and aesthetic clinics.">
-<meta name="keywords" content="spa supplies wholesale, salon private label, professional skincare, massage oil, hair‑care serum, waxing supplies, beauty OEM">
-<style>
-/* === 严格沿用 primpep.com 原版简约风格 === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #222222;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 24px;
-    font-size: 16px;
-}
-
-h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
-    font-weight: normal;
-}
-
-h2 {
-    font-size: 24px;
-    margin: 42px 0 14px;
-    font-weight: normal;
-}
-
-h3 {
-    font-size: 19px;
-    margin: 22px 0 6px;
-    font-weight: normal;
-}
-
-h4 {
-    font-size: 17px;
-    margin: 16px 0 4px;
-    font-weight: normal;
-}
-
-p {
-    margin-bottom: 10px;
-    color: #333333;
-}
-
-a {
-    color: #243b52;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    padding-left: 22px;
-    margin-bottom: 12px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #dddddd;
-    margin: 36px 0;
-}
-
-/* 页面内导航按钮 */
-.nav-links {
-    margin: 20px 0 28px;
-}
-
-.nav-links a {
-    display: inline-block;
-    background: #243b52;
-    color: #ffffff;
-    padding: 9px 18px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    border-radius: 3px;
-    font-size: 15px;
-}
-
-.nav-links a:hover {
-    background: #324e6b;
-    text-decoration: none;
-}
-
-/* WhatsApp联系按钮 */
-.whatsapp‑btn‑wrap {
-    margin:24px 0;
-}
-.whatsapp‑btn {
-    display:inline‑block;
-    background‑color:#25D366;
-    color:#fff !important;
-    padding:12px 22px;
-    border‑radius:4px;
-    font‑weight:bold;
-    font‑size:15px;
-    text‑decoration:none !important;
-}
-.whatsapp‑btn:hover {
-    background‑color:#20bc5b;
-}
-
-/* 产品图片占位 */
-.product‑photo {
-    background: #f7f7f7;
-    color: #777777;
-    font‑size: 13px;
-    padding: 12px;
-    text‑align: center;
-    margin: 12px 0;
-    max‑width: 300px;
-}
-
-.product‑photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.inline‑note {
-    font‑size: 14px;
-    color: #555555;
-    margin: 18px 0 8px;
-}
-
-/* FAQ */
-.faq‑item {
-    margin‑bottom: 18px;
-}
-
-.faq‑question {
-    font‑weight: bold;
-    margin‑bottom: 4px;
-}
-
-.faq‑answer {
-    color: #444444;
-}
-
-/* Footer */
-footer {
-    margin‑top: 60px;
-    padding‑top: 24px;
-    border‑top: 1px solid #dddddd;
-    font‑size: 15px;
-    color: #444444;
-}
-
-footer p {
-    margin‑bottom: 8px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primpep | Spa & Salon Professional Beauty Supplier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        earth: '#5A5349',
+                        sage: '#8A9A86',
+                        cream: '#F6F3ED',
+                        wood: '#805E43',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow-sm {
+                text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+            }
+            .img-hover-zoom {
+                overflow: hidden;
+            }
+            .img-hover-zoom img {
+                transition: transform 0.5s ease;
+            }
+            .img-hover-zoom:hover img {
+                transform: scale(1.06);
+            }
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-cream text-earth">
+    <!-- 导航栏 -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-wood">PRIMPEP</a>
+            <nav class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+                <a href="#products" class="hover:text-sage transition-colors">Products</a>
+                <a href="#about" class="hover:text-sage transition-colors">Our Story</a>
+                <a href="#sourcing" class="hover:text-sage transition-colors">Sourcing</a>
+                <a href="#wholesale" class="hover:text-sage transition-colors">Wholesale</a>
+                <a href="#contact" class="hover:text-sage transition-colors">Contact</a>
+            </nav>
+            <button class="md:hidden text-earth text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-<h1>PRIMPEP</h1>
+    <!-- Hero首屏大图 -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/41001444203344389210113004400101~tplv-a9rns2rl98-image.image" alt="Spa salon full range beauty products" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative text-center px-6 max-w-4xl">
+            <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-serif text-white text-shadow-sm leading-tight">Professional Supplies for Spas & Salons Worldwide</h1>
+            <p class="mt-6 text-white text-lg md:text-xl max-w-2xl mx-auto">Essential Oils | Hard Wax Beads | Skincare | Hair Growth Serums. OEM & Bulk Wholesale available.</p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="px-8 py-4 bg-sage text-white uppercase tracking-widest text-sm hover:bg-earth transition">Shop Collection</a>
+                <a href="https://wa.me/85247487837?text=Hello,%20I%20am%20interested%20in%20Primpep%20spa%20products.%20Please%20send%20your%20wholesale%20price%20list." target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-green-600 text-white uppercase tracking-widest text-sm hover:bg-green-700 transition">WhatsApp Inquiry</a>
+            </div>
+        </div>
+    </section>
 
-<p><strong>Full‑Range Spa & Salon Professional Products</strong></p>
-<p>PRIMPEP supplies complete professional product portfolio: salon‑grade skincare, aromatherapy & massage oils, hair‑care scalp series and waxing hair‑removal supplies. Safe, stable formulas built for long‑term business for spas, salons & aesthetic clinics.</p>
+    <!-- 产品网格区 -->
+    <section id="products" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-earth">Our Product Lines</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Full selection of salon-grade aromatherapy, waxing, skincare & hair care products with private label support.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- 产品卡片1：精油 -->
+                <div class="group">
+                    <div class="img-hover-zoom">
+                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/10001100000044448041002244440000~tplv-a9rns2rl98-image.image" alt="Pure Essential Oil" class="w-full h-80 object-cover">
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-xl font-serif">Essential Oils</h3>
+                        <p class="text-gray-500 mt-1">100% pure therapeutic grade oils for massage & aromatherapy</p>
+                        <span class="block mt-3 text-wood font-medium">Bulk & retail sizes</span>
+                    </div>
+                </div>
+                <!-- 产品卡片2：蜜蜡脱毛 -->
+                <div class="group">
+                    <div class="img-hover-zoom">
+                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/30001100000044448041002244440000~tplv-a9rns2rl98-image.image" alt="Hard Wax Beads for Waxing" class="w-full h-80 object-cover">
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-xl font-serif">Wax Beads</h3>
+                        <p class="text-gray-500 mt-1">Fast melting hard wax for professional body waxing</p>
+                        <span class="block mt-3 text-wood font-medium">Multiple fragrance options</span>
+                    </div>
+                </div>
+                <!-- 产品卡片3：护肤蓝铜肽精华 -->
+                <div class="group">
+                    <div class="img-hover-zoom">
+                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/20001100000044448041002244440000~tplv-a9rns2rl98-image.image" alt="GHK-Cu Copper Peptide Serum" class="w-full h-80 object-cover">
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-xl font-serif">Skin Care Serums</h3>
+                        <p class="text-gray-500 mt-1">Blue copper peptide & niacinamide anti-aging skincare</p>
+                        <span class="block mt-3 text-wood font-medium">OEM private label ready</span>
+                    </div>
+                </div>
+                <!-- 产品卡片4：护发微针生发套装 -->
+                <div class="group">
+                    <div class="img-hover-zoom">
+                        <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/50001100000044448041002244440000~tplv-a9rns2rl98-image.image" alt="Hair regrowth micro infusion kit" class="w-full h-80 object-cover">
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="text-xl font-serif">Hair Care</h3>
+                        <p class="text-gray-500 mt-1">Micro-needle hair regrowth solution for salon clients</p>
+                        <span class="block mt-3 text-wood font-medium">Professional salon kit</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-14">
+                <a href="#" class="inline-block px-8 py-4 bg-wood text-white uppercase tracking-widest text-sm hover:bg-earth transition">View All Products</a>
+            </div>
+        </div>
+    </section>
 
-<div class="nav‑links">
-    <a href="#skincare">Skincare</a>
-    <a href="#haircare">Hair Care</a>
-    <a href="#essentialoil">Essential Oil</a>
-    <a href="#waxing">Waxing</a>
-    <a href="#others">Others</a>
-</div>
+    <!-- About 品牌区块 -->
+    <section id="about" class="py-24 bg-cream">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/41001444203344389210113004400101~tplv-a9rns2rl98-image.image" alt="Full spa product range" class="w-full shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-serif text-earth">Your One-Stop Spa Supplier</h2>
+                    <p class="mt-6 text-gray-700 leading-relaxed">
+                        Primpep supplies complete salon & spa product portfolio: essential oils, depilatory hard wax, peptide skincare, and hair regrowth treatments. We support salon owners worldwide with low MOQ OEM private label service.
+                    </p>
+                    <ul class="mt-8 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check-circle text-sage mt-1"></i>
+                            <span>Formulations compliant with global cosmetic regulations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa fa-check-circle text-sage mt-1"></i>
+                            <span>Small MOQ private label & bulk wholesale options</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="https://wa.me/85247487837?text=Hello,%20I%20am%20interested%20in%20Primpep%20spa%20products.%20Please%20send%20your%20wholesale%20price%20list." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white uppercase tracking-widest text-sm hover:bg-green-700 transition">
+                            <i class="fa fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p class="inline‑note">For detailed catalog and price information please contact us via WhatsApp.</p>
-<div class="whatsapp‑btn‑wrap">
-    <a class="whatsapp‑btn" href="https://wa.me/85247487837" target="_blank">Get Detailed Catalog & Price</a>
-</div>
+    <!-- Sourcing 理念区块 -->
+    <section id="sourcing" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-serif text-earth">Quality & Compliance</h2>
+            <p class="max-w-2xl mx-auto mt-4 text-gray-600">We build safe, salon-ready beauty formulas for wellness businesses across the globe.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div class="p-8 border border-gray-100 hover:shadow-md transition">
+                    <i class="fa fa-leaf text-4xl text-sage"></i>
+                    <h3 class="mt-5 text-xl font-serif">Premium Raw Materials</h3>
+                    <p class="mt-3 text-gray-600">Carefully selected botanicals & cosmetic ingredients.</p>
+                </div>
+                <div class="p-8 border border-gray-100 hover:shadow-md transition">
+                    <i class="fa fa-shield text-4xl text-sage"></i>
+                    <h3 class="mt-5 text-xl font-serif">Safety Compliance</h3>
+                    <p class="mt-3 text-gray-600">Products meet international cosmetic safety standards.</p>
+                </div>
+                <div class="p-8 border border-gray-100 hover:shadow-md transition">
+                    <i class="fa fa-globe text-4xl text-sage"></i>
+                    <h3 class="mt-5 text-xl font-serif">Global Shipping</h3>
+                    <p class="mt-3 text-gray-600">Ship bulk & finished goods to salons all over the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<hr>
+    <!-- B2B Wholesale区块 -->
+    <section id="wholesale" class="py-24 bg-earth text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-serif">Wholesale & Private Label</h2>
+                <p class="mt-6 leading-relaxed">
+                    If you own a spa, salon or wellness store anywhere in the world, we provide full product line wholesale pricing, custom packaging and globally compliant cosmetic formulas.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="#contact" class="inline-block px-8 py-4 bg-sage uppercase tracking-widest text-sm hover:bg-white hover:text-earth transition">Request Wholesale Quote</a>
+                    <a href="https://wa.me/85247487837?text=Hello,%20I%20am%20interested%20in%20Primpep%20spa%20products.%20Please%20send%20your%20wholesale%20price%20list." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 bg-green-600 uppercase tracking-widest text-sm hover:bg-green-700 transition">
+                        <i class="fa fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/30001100000044448041002244440000~tplv-a9rns2rl98-image.image" alt="Hard wax beads for salon waxing" class="w-full shadow-lg">
+            </div>
+        </div>
+    </section>
 
-<h2 id="skincare">Skincare</h2>
-<p>Professional formulas designed for beauty salon and aesthetic clinic treatment.</p>
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-cream">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-serif text-earth">Get In Touch</h2>
+                <p class="mt-4 text-gray-600">Send us your inquiry for pricing, samples or private label details.</p>
+                <a href="https://wa.me/85247487837?text=Hello,%20I%20am%20interested%20in%20Primpep%20spa%20products.%20Please%20send%20your%20wholesale%20price%20list." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white uppercase tracking-widest text-sm hover:bg-green-700 transition mb-10">
+                    <i class="fa fa-whatsapp"></i> Chat via WhatsApp: +852-47487837
+                </a>
+            </div>
+            <form class="bg-white p-8 shadow-md">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm text-earth mb-2">Name</label>
+                        <input type="text" class="w-full border border-gray-200 px-4 py-3 focus:outline-none focus:border-sage">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-earth mb-2">Email</label>
+                        <input type="email" class="w-full border border-gray-200 px-4 py-3 focus:outline-none focus:border-sage">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm text-earth mb-2">Company / Salon Name</label>
+                    <input type="text" class="w-full border border-gray-200 px-4 py-3 focus:outline-none focus:border-sage">
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm text-earth mb-2">Interested Product Category</label>
+                    <select class="w-full border border-gray-200 px-4 py-3 focus:outline-none focus:border-sage">
+                        <option>Essential Oils</option>
+                        <option>Hard Wax Beads</option>
+                        <option>Skin Care Serums</option>
+                        <option>Hair Care Kits</option>
+                        <option>Full Line Wholesale</option>
+                        <option>Private Label OEM</option>
+                    </select>
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm text-earth mb-2">Message</label>
+                    <textarea rows="5" class="w-full border border-gray-200 px-4 py-3 focus:outline-none focus:border-sage"></textarea>
+                </div>
+                <button type="submit" class="mt-8 px-8 py-4 bg-wood text-white uppercase tracking-widest text-sm hover:bg-earth transition">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
 
-<ul>
-    <li>Anti‑Aging &amp; Firming</li>
-    <li>Brightening &amp; Resurfacing</li>
-    <li>Hydration</li>
-    <li>Repair &amp; Soothing</li>
-    <li>Eye Care</li>
-    <li>Exfoliating &amp; Cleansing</li>
-</ul>
+    <!-- Footer -->
+    <footer class="bg-earth text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-xl font-serif mb-4">PRIMPEP</h3>
+                    <p class="text-gray-300 text-sm">One-stop supplier for spa & salon: essential oils, waxing beads, skincare and hair regrowth products.</p>
+                </div>
+                <div>
+                    <h4 class="uppercase tracking-wider text-sm mb-4">Shop</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-sage">Essential Oils</a></li>
+                        <li><a href="#" class="hover:text-sage">Hard Wax Beads</a></li>
+                        <li><a href="#" class="hover:text-sage">Skin Care Serums</a></li>
+                        <li><a href="#" class="hover:text-sage">Hair Care Kits</a></li>
+                        <li><a href="#" class="hover:text-sage">Private Label OEM</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="uppercase tracking-wider text-sm mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-sage">Global Cosmetic Compliance</a></li>
+                        <li><a href="#" class="hover:text-sage">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="uppercase tracking-wider text-sm mb-4">Contact</h4>
+                    <p class="text-gray-300 text-sm mb-4">WhatsApp: +852-47487837</p>
+                    <!-- ========== 这里修改FB & IG链接 ========== -->
+                    <div class="flex gap-4 mt-4 text-lg">
+                        <a href="YOUR_FACEBOOK_URL" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="YOUR_INSTAGRAM_URL" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                © 2026 Primpep. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
-<div class="product‑photo">[Product Photo]</div>
-
-<h2 id="haircare">Hair Care</h2>
-<p>Salon‑grade scalp and hair treatment for micro‑infusion salon procedures.</p>
-
-<ul>
-    <li>Hair Growth &amp; Anti‑Hair‑Loss</li>
-    <li>Hair Repair &amp; Conditioning</li>
-    <li>Scalp Care</li>
-</ul>
-
-<div class="product‑photo">[Product Photo]</div>
-
-<h2 id="essentialoil">Essential Oil</h2>
-<p>Professional spa aromatherapy, pure essential oils, carrier oils &amp; bulk massage oil for body &amp; facial spa treatment.</p>
-
-<ul>
-    <li>Aromatherapy &amp; Relaxation</li>
-    <li>Massage &amp; Body Care</li>
-    <li>Carrier Oil / Blending Base</li>
-    <li>Home Fragrance &amp; Diffusion</li>
-</ul>
-
-<div class="product‑photo">[Product Photo]</div>
-
-<h2 id="waxing">Waxing</h2>
-<p>Salon‑grade hair‑removal supplies for full‑body salon waxing service.</p>
-
-<ul>
-    <li>Hair Removal / Waxing</li>
-    <li>Waxing Prep &amp; Aftercare</li>
-</ul>
-
-<div class="product‑photo">[Product Photo]</div>
-
-<h2 id="others">Others</h2>
-<p>Additional special‑treatment salon items for spa &amp; salon business.</p>
-<p class="inline‑note">For complete product list, images and specifications please click WhatsApp button above.</p>
-
-<hr>
-
-<h2>About PRIMPEP</h2>
-<p>PRIMPEP is a China‑based wholesale &amp; OEM manufacturer serving spas, salons, med‑spas and global beauty distributors worldwide.</p>
-<p>Our full‑range product portfolio includes salon‑grade skincare, aromatherapy massage oils, hair‑scalp treatment products and waxing hair‑removal supplies.</p>
-<p>We have large quantity of goods in stock, support bulk wholesale, small trial orders and full private‑label OEM service. We help overseas salon owners and distributors launch their own branded products with stable quality and competitive pricing. Most formulas are clean‑ingredient based, suitable for sensitive skin and post‑procedure recovery.</p>
-
-<h2>Buyer Common Concerns</h2>
-<p>Core advantages for global salon buyers and distributors</p>
-
-<h4>Safe Clean Formula</h4>
-<p>All products use stable clean ingredients, no hormones, safe for long‑term use.</p>
-
-<h4>Stable Supply &amp; In‑Stock Goods</h4>
-<p>Ready stock available, continuous bulk supply, consistent quality for long term cooperation.</p>
-
-<h4>Private Label Service</h4>
-<p>Custom logo, packaging and formula for your own brand.</p>
-
-<h4>Global Shipping</h4>
-<p>Support international delivery for overseas distributors.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq‑item">
-    <div class="faq‑question">Do you support private label / OEM?</div>
-    <div class="faq‑answer">Yes. We provide full private label service including custom packaging, logo printing and slight formula adjustment.</div>
-</div>
-
-<div class="faq‑item">
-    <div class="faq‑question">Are products suitable for sensitive skin?</div>
-    <div class="faq‑answer">Most formulas are mild and suitable for sensitive skin and post‑procedure skin.</div>
-</div>
-
-<div class="faq‑item">
-    <div class="faq‑question">Can I mix different series products?</div>
-    <div class="faq‑answer">All formulas are compatible. You can freely combine products based on skin demands.</div>
-</div>
-
-<div class="faq‑item">
-    <div class="faq‑question">Do you have ready‑stock items?</div>
-    <div class="faq‑answer">Many items are kept in stock, welcome to inquire about stock status and MOQ via WhatsApp.</div>
-</div>
-
-<footer>
-    <h3>PRIMPEP</h3>
-    <p>Full‑Range Spa &amp; Salon Products Supplier<br>
-    In‑Stock | Wholesale &amp; Private‑Label OEM Available</p>
-
-    <h3>Contact Us</h3>
-    <p>Phone: +852 4748 7837</p>
-    <p>Email: zhangyao@primpep.com</p>
-    <p>WhatsApp: <a href="https://wa.me/85247487837" target="_blank">+852 4748 7837</a></p>
-    <p>Facebook: <a href="https://www.facebook.com/primpep.official" target="_blank">PRIMPEP Official Page</a></p>
-    <p>Facebook Shop: <a href="https://www.facebook.com/primpep.official/shop" target="_blank">Visit our Facebook Shop</a></p>
-
-    <p style="margin‑top:18px;">© 2026 PRIMPEP All Rights Reserved</p>
-</footer>
-
+    <!-- 右下角悬浮WhatsApp固定按钮 -->
+    <a href="https://wa.me/85247487837?text=Hello,%20I%20am%20interested%20in%20Primpep%20spa%20products.%20Please%20send%20your%20wholesale%20price%20list." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:bg-green-700 transition">
+        <i class="fa fa-whatsapp"></i>
+    </a>
 </body>
 </html>
-
